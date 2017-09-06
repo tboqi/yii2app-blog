@@ -45,7 +45,7 @@ return [
         'view' => [
             'renderers' => [
                 'tpl' => [
-                    'class' => 'yii\smarty\ViewRenderer',
+                    'class' => 'qiyu\ViewRender',
                     //'cachePath' => '@runtime/Smarty/cache',
                 ],
             ],
