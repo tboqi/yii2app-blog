@@ -1,22 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/favicon.ico">
+{{extends file='../layout/base.tpl'}}
+{{block name=title}}首页{{/block}}
 
-    <title>Blog Template for Bootstrap</title>
+{{block name=css}}
+<link href="/css/blog.css" rel="stylesheet">
+{{/block}}
 
-    <!-- Bootstrap core CSS -->
-    <link href="/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="/css/blog.css" rel="stylesheet">
-  </head>
-
-  <body>
+{{block name=content}}
 
     <div class="blog-masthead">
       <div class="container">
@@ -162,5 +151,4 @@
     <script src="/dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
-</html>
+{{/block}}
