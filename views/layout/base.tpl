@@ -22,11 +22,15 @@
     <div class="blog-masthead">
       <div class="container">
         <nav class="nav">
-          <a class="nav-link active" href="#">Home</a>
+          <a class="nav-link active" href="/">首页</a>
           <a class="nav-link" href="#">New features</a>
           <a class="nav-link" href="#">Press</a>
-          <a class="nav-link" href="#">New hires</a>
-          <a class="nav-link" href="#">About</a>
+          {{if $isLogin}}
+          <a class="nav-link" href="/admin">管理</a>
+          <a class="nav-link" href="/site/logout">退出</a>
+          {{else}}
+          <a class="nav-link" href="/site/login">登录</a>
+          {{/if}}
         </nav>
       </div>
     </div>
