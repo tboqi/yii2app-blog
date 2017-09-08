@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="/favicon.ico">
 
-    <title>{{block name=title}} - 我的博客{{/block}}</title>
+    <title>{{block name=title}}{{/block}} - 我的博客</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,6 +27,7 @@
           <a class="nav-link" href="#">Press</a>
           {{if $isLogin}}
           <a class="nav-link" href="/admin">管理</a>
+          <a class="nav-link" href="/admin/user/reset-password">修改密码</a>
           <a class="nav-link" href="/site/logout">退出</a>
           {{else}}
           <a class="nav-link" href="/site/login">登录</a>
