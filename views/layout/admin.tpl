@@ -7,30 +7,28 @@
 
 {{block name=nav}}
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Dashboard</a>
-      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      {{*<a class="navbar-brand" href="#">Dashboard</a>*}}
 
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <div class="collapse navbar-collapse"{{* id="navbarsExampleDefault"*}}>
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">首页 <span class="sr-only">(current)</span></a>
+          <li class="nav-item {{*active*}}">
+            <a class="nav-link" href="/">网站首页</a>
           </li>
+          {{*
           <li class="nav-item">
             <a class="nav-link" href="#">Settings</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/admin/user/reset-password">修改密码</a>
-          </li>
+          </li>*}}
           <li class="nav-item">
             <a class="nav-link" href="/site/logout">退出</a>
           </li>
         </ul>
-        <form class="form-inline mt-2 mt-md-0">
+        {{*<form class="form-inline mt-2 mt-md-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        </form>*}}
       </div>
     </nav>
 {{/block}}
@@ -41,49 +39,25 @@
         <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
           <ul class="nav nav-pills flex-column">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Overview <span class="sr-only">(current)</span></a>
+              <a class="nav-link{{if $module=='admin' && $controller=='site' && $action=='index'}} active{{/if}}" href="/admin">控制台首页</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Reports</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Analytics</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Export</a>
+              <a class="nav-link{{if $module=='admin' && $controller=='user' && $action=='reset-password'}} active{{/if}}" href="/admin/user/reset-password">修改密码</a>
             </li>
           </ul>
 
           <ul class="nav nav-pills flex-column">
             <li class="nav-item">
-              <a class="nav-link" href="#">Nav item</a>
+              <a class="nav-link{{if $module=='admin' && $controller=='article' && $action=='index'}} active{{/if}}" href="/admin/article/index">文章</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Nav item again</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">One more nav</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Another nav item</a>
-            </li>
-          </ul>
-
-          <ul class="nav nav-pills flex-column">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Nav item again</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">One more nav</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Another nav item</a>
+              <a class="nav-link{{if $module=='admin' && $controller=='article-category' && $action=='index'}} active{{/if}}" href="/admin/article-category/index">文章分类</a>
             </li>
           </ul>
         </nav>
 
         <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
-        {{block name=content1}}
+        {{block name=adminMain}}
         {{/block}}
         </main>
       </div>
