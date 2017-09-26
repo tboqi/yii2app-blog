@@ -2,10 +2,10 @@
 namespace app\modules\admin\controllers;
 
 use common\models\User;
-use qiyu\Controller;
+use qiyu\ControllerAdmin;
 use Yii;
 
-class UserController extends Controller
+class UserController extends ControllerAdmin
 {
     public function actionResetPassword()
     {
