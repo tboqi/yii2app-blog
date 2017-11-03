@@ -42,6 +42,10 @@ return [
             'rules' => [
             ],
         ],
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager', // 使用数据库管理配置文件
+            "defaultRoles" => ["guest"],
+        ],
         'db' => [
             'class' => 'yii\db\Connection',
             'dsn' => 'mysql:host=10.0.75.1;dbname=yiiblog',
