@@ -70,4 +70,7 @@ return [
             // 'defaultController' => 'site',
         ],
     ],
+    "aliases" => [
+        "@mdm/admin" => "@vendor/mdmsoft/yii2-admin",
+    ],
 ];
