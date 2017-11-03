@@ -1,4 +1,4 @@
-{{extends file='../../layout/admin.tpl'}}
+{{extends file='../../layouts/admin.tpl'}}
 {{block name=title1}}修改密码{{/block}}
 
 {{block name=adminMain}}

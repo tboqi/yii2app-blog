@@ -1,4 +1,4 @@
-{{extends file='../layout/base.tpl'}}
+{{extends file='../layouts/base.tpl'}}
 {{block name=title}}登录{{/block}}
 
 {{block name=css}}

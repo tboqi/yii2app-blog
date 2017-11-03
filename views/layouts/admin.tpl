@@ -1,4 +1,4 @@
-{{extends file='../layout/base.tpl'}}
+{{extends file='../layouts/base.tpl'}}
 {{block name=title}}{{block name=title1}}{{/block}} - 后台管理{{/block}}
 
 {{block name=css}}
