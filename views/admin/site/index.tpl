@@ -42,62 +42,62 @@
           </ul>
         </li>
         <li class="dropDown dropDown_hover">
-              <a href="javascript:;" class="dropDown_A">工具 <i class="Hui-iconfont">&#xe6d5;</i></a>
-              <ul class="dropDown-menu menu radius box-shadow">
+          <a href="javascript:;" class="dropDown_A">工具 <i class="Hui-iconfont">&#xe6d5;</i></a>
+          <ul class="dropDown-menu menu radius box-shadow">
+            <li>
+              <a href="http://www.h-ui.net/bug.shtml" target="_blank">Bug兼容性汇总</a>
+            </li>
+            <li>
+              <a href="http://www.h-ui.net/websafecolors.shtml" target="_blank">web安全色</a>
+            </li>
+            <li>
+              <a href="http://www.h-ui.net/Hui-3.7-Hui-iconfont.shtml" target="_blank">Hui-iconfont</a>
+            </li>
+            <li>
+              <a href="javascript:;">web工具箱<i class="arrow Hui-iconfont">&#xe6d7;</i></a>
+              <ul class="menu">
                 <li>
-                  <a href="http://www.h-ui.net/bug.shtml" target="_blank">Bug兼容性汇总</a>
+                  <a href="http://www.h-ui.net/tools/jsformat.shtml" target="_blank">JS/HTML格式化工具</a>
                 </li>
                 <li>
-                  <a href="http://www.h-ui.net/websafecolors.shtml" target="_blank">web安全色</a>
+                  <a href="http://www.h-ui.net/tools/HTMLtoJS.shtml" target="_blank">HTML/JS转换工具</a>
                 </li>
                 <li>
-                  <a href="http://www.h-ui.net/Hui-3.7-Hui-iconfont.shtml" target="_blank">Hui-iconfont</a>
+                  <a href="http://www.h-ui.net/tools/cssformat.shtml" target="_blank">CSS代码格式化工具</a>
                 </li>
                 <li>
-                  <a href="javascript:;">web工具箱<i class="arrow Hui-iconfont">&#xe6d7;</i></a>
+                  <a href="http://www.h-ui.net/tools/daxiaoxie.shtml" target="_blank">字母大小写转换工具</a>
+                </li>
+                <li>
+                  <a href="http://www.h-ui.net/tools/fantizhuanhuan.shtml" target="_blank">繁体字、火星文转换</a>
+                </li>
+                <li>
+                  <a href="javascript:;">三级菜单<i class="arrow Hui-iconfont">&#xe6d7;</i></a>
                   <ul class="menu">
                     <li>
-                      <a href="http://www.h-ui.net/tools/jsformat.shtml" target="_blank">JS/HTML格式化工具</a>
+                      <a href="javascript:;">四级菜单</a>
                     </li>
                     <li>
-                      <a href="http://www.h-ui.net/tools/HTMLtoJS.shtml" target="_blank">HTML/JS转换工具</a>
+                      <a href="javascript:;">四级菜单</a>
                     </li>
                     <li>
-                      <a href="http://www.h-ui.net/tools/cssformat.shtml" target="_blank">CSS代码格式化工具</a>
-                    </li>
-                    <li>
-                      <a href="http://www.h-ui.net/tools/daxiaoxie.shtml" target="_blank">字母大小写转换工具</a>
-                    </li>
-                    <li>
-                      <a href="http://www.h-ui.net/tools/fantizhuanhuan.shtml" target="_blank">繁体字、火星文转换</a>
-                    </li>
-                    <li>
-                      <a href="javascript:;">三级菜单<i class="arrow Hui-iconfont">&#xe6d7;</i></a>
-                      <ul class="menu">
-                        <li>
-                          <a href="javascript:;">四级菜单</a>
-                        </li>
-                        <li>
-                          <a href="javascript:;">四级菜单</a>
-                        </li>
-                        <li>
-                          <a href="javascript:;">四级菜单</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#">三级导航</a>
+                      <a href="javascript:;">四级菜单</a>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#">二级导航</a>
-                </li>
-                <li class="disabled">
-                  <a href="javascript:;">二级菜单</a>
+                  <a href="#">三级导航</a>
                 </li>
               </ul>
             </li>
+            <li>
+              <a href="#">二级导航</a>
+            </li>
+            <li class="disabled">
+              <a href="javascript:;">二级菜单</a>
+            </li>
+          </ul>
+        </li>
       </ul>
     </nav>
     <nav id="Hui-userbar" class="nav navbar-nav navbar-userbar hidden-xs">
@@ -196,7 +196,7 @@ $(function(){
   });*/
 });
 /*个人信息*/
-function myselfinfo(){
+function myselfinfobak(){
   layer.open({
     type: 1,
     area: ['300px','200px'],
@@ -206,6 +206,9 @@ function myselfinfo(){
     title: '查看信息',
     content: '<div>管理员信息</div>'
   });
+}
+function myselfinfo(){
+  layer_show('查看信息','/admin/user/update?id=1','','500');
 }
 
 /*资讯-添加*/

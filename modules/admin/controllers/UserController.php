@@ -2,7 +2,7 @@
 namespace app\modules\admin\controllers;
 
 use backend\models\AuthItem;
-use backend\models\User;
+use blog\models\User;
 use Yii;
 use yii\data\Pagination;
 
