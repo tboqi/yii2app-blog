@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\models;
+namespace blog\models;
 
 use Yii;
 
@@ -63,8 +63,9 @@ class AuthItemChild extends \yii\db\ActiveRecord
         return $this->hasOne(AuthItem::className(), ['name' => 'child']);
     }
 
-    public function  getPermission($id){
-        $permission = self::find()->where(['parent'=>$id])->asArray()->all();
+    public function getPermission($id)
+    {
+        $permission = self::find()->where(['parent' => $id])->asArray()->all();
         return $permission;
     }
 }
