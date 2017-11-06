@@ -1,7 +1,7 @@
 <?php
 namespace app\modules\admin\controllers;
 
-use backend\models\AuthItem;
+use blog\models\AuthItem;
 use blog\models\User;
 use Yii;
 use yii\data\Pagination;

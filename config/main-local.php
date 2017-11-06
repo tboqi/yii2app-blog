@@ -1,10 +1,22 @@
 <?php
 
 $config = [
+    'language' => 'zh-CN',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'z4ZDlH0vU59EpUqGsvw6vavdmLA2J3fK',
+        ],
+        'i18n' => [
+            'translations' => [
+                '*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    //'basePath' => '/messages',
+                    'fileMap' => [
+                        'common' => 'common.php',
+                    ],
+                ],
+            ],
         ],
     ],
 ];
