@@ -5,6 +5,7 @@ namespace app\modules\admin\controllers;
 use app\modules\admin\components\Helper;
 use app\modules\admin\models\Menu;
 use app\modules\admin\models\searchs\Menu as MenuSearch;
+// use qiyu\Controller;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\web\Controller;

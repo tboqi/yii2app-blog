@@ -135,4 +135,9 @@ class PermissionController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+
+    public function actionUpdate()
+    {
+        return '未完成';
+    }
 }
