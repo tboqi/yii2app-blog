@@ -1,11 +1,11 @@
 <?php
 
-namespace mdm\admin\components;
+namespace app\modules\admin\components;
 
 use Yii;
-use yii\web\User;
-use yii\helpers\ArrayHelper;
 use yii\caching\TagDependency;
+use yii\helpers\ArrayHelper;
+use yii\web\User;
 
 /**
  * Description of Helper
@@ -57,7 +57,7 @@ class Helper
                 }
                 if ($cache) {
                     $cache->set($roles, self::$_defaultRoutes, Configs::cacheDuration(), new TagDependency([
-                        'tags' => Configs::CACHE_TAG
+                        'tags' => Configs::CACHE_TAG,
                     ]));
                 }
             }
@@ -87,7 +87,7 @@ class Helper
                 self::$_userRoutes[$userId] = $routes;
                 if ($cache) {
                     $cache->set([__METHOD__, $userId], $routes, Configs::cacheDuration(), new TagDependency([
-                        'tags' => Configs::CACHE_TAG
+                        'tags' => Configs::CACHE_TAG,
                     ]));
                 }
             }

@@ -69,6 +69,7 @@ class UserController extends \yii\web\Controller
             $model->setPassword($post['User']['auth_key']);
             $model->generateAuthKey();
             $model->created_at = time();
+            $model->updated_at = time();
             $model->save();
             $user_id = $model->attributes['id']; //获取插入后id
             $role = $auth->createRole($post['AuthItem']['name']); //创建角色对象

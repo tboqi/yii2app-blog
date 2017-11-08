@@ -20,6 +20,7 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
+        // var_dump(Yii::$app->user->isGuest);exit;
         if (!Yii::$app->user->isGuest) {
             return $this->redirect('/admin');
             // return $this->goHome();
@@ -32,7 +33,6 @@ class SiteController extends Controller
         } else {
             return $this->render('login.tpl', [
                 'model' => $model,
-
             ]);
         }
     }
