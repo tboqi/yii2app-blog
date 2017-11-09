@@ -1,7 +1,7 @@
 <?php
-namespace blog\controllers;
+namespace backend\controllers;
 
-use blog\models\ContactForm;
+use backend\models\ContactForm;
 use common\models\LoginForm;
 use qiyu\Controller;
 use Yii;
