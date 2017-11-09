@@ -29,7 +29,7 @@ return [
             'targets' => [
                 [
                     'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
+                    'levels' => ['error', 'warning', 'info', 'trace'], //'profile'
                 ],
             ],
         ],
@@ -43,7 +43,7 @@ return [
             ],
         ],
         'authManager' => [
-            'class' => 'yii\rbac\DbManager', // 使用数据库管理配置文件
+            'class' => 'qiyu\DbManager', // 使用数据库管理配置文件
             "defaultRoles" => ["guest"],
         ],
         'db' => [
