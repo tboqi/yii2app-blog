@@ -6,7 +6,7 @@ use blog\models\User;
 use Yii;
 use yii\data\Pagination;
 
-class UserController extends \yii\web\Controller
+class UserController extends \qiyu\ControllerPlus
 {
 
     public function actionIndex()

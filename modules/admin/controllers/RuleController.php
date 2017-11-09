@@ -16,7 +16,7 @@ use yii\web\NotFoundHttpException;
  * @author Misbahul D Munir <misbahuldmunir@gmail.com>
  * @since 1.0
  */
-class RuleController extends Controller
+class RuleController extends \qiyu\ControllerPlus
 {
 
     /**

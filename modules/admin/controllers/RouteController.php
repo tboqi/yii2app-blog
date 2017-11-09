@@ -12,7 +12,7 @@ use yii\web\Controller;
  * @author Misbahul D Munir <misbahuldmunir@gmail.com>
  * @since 1.0
  */
-class RouteController extends Controller
+class RouteController extends \qiyu\ControllerPlus
 {
     public function behaviors()
     {
