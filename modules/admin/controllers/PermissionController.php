@@ -13,23 +13,9 @@ use yii\web\NotFoundHttpException;
 /**
  * PermissionController implements the CRUD actions for AuthItemChild model.
  */
-class PermissionController extends Controller
+class PermissionController extends \qiyu\ControllerPlus
 {
     public $enableCsrfValidation = false;
-    /**
-     * @inheritdoc
-     */
-    public function beforeAction($action)
-    {
-        // var_dump(Yii::$app->controller->module);exit;
-        $action = Yii::$app->controller->module->module->requestedRoute;
-        // var_dump($action);exit;
-        if (\Yii::$app->user->can('/' . $action)) {
-            return true;
-        } else {
-            echo '<div style="margin: 100px auto;text-align: center;background-color: #1ab394; color: #ffffff;width: 500px;height: 50px;line-height: 50px;border-radius: 5px;"><h4>对不起，您现在还没获此操作的权限</h4></div>';
-        }
-    }
 
     //给角色配置权限
     public function actionSet($id)
